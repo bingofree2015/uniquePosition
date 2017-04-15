@@ -8,7 +8,7 @@ function UniquePositionInit() {
     up = UniquePosition('123');
 }
 
-UniquePositionInit();
+//UniquePositionInit();
 
 var up1 = UP.InitialPosition("aaaaaaaaaaaaaaaaaaaaaaa99981");
 var compressValue1 = up1.getCompressValue();
