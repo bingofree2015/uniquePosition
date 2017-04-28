@@ -1,52 +1,28 @@
 'use strict';
 
-const UP = require('./build/Release/UniquePosition');
-const UniquePosition = UP.UniquePosition;
+const up = require('./build/Release/UniquePosition');
 
-function UniquePositionInit() {
-    var up = new UniquePosition('123');
-    up = UniquePosition('123');
-}
+let suffix1 = "01|02|300106|00bingofree2015";
+let up1 = up.InitialPosition(suffix1);
+let cv1 = up1.getCompressValue(true);
+let cvi1 = up1.ToInt64();
+console.log(suffix1 + " -> " + cv1 + " -> " + cvi1);
 
-//UniquePositionInit();
+let suffix2 = '02|01|3000208|bingo789free78';
+let up2 = up.Before(up1, suffix2);
+let cv2 = up2.getCompressValue(true);
+let cvi2 = up2.ToInt64();
+console.log(suffix2 + " -> " + cv2 + " -> " + cvi2);
 
-var up1 = UP.InitialPosition("aaaaaaaaaaaaaaaaaaaaaaa99981");
-var compressValue1 = up1.getCompressValue();
-console.log(compressValue1);
+let suffix3 = "03|04|100789|00000kvkv009876";
+let up3 = up.After(up1, suffix3);
+let cv3 = up3.getCompressValue(true);
+let cvi3 = up3.ToInt64();
+console.log(suffix3 + " -> " + cv3 + " -> " + cvi3);
 
-var suffix2 = 'qqqqqqaaaaiiiuuuuuu788909834';
-var up2 = UP.Before(up1, suffix2);
-var compressValue2 = up2.getCompressValue();
-console.log(compressValue2);
+let suffix4 = "04|02|300986|00000alix98yoll";
+let up4 = up.Between(up1, up3, suffix4);
+let cv4 = up4.getCompressValue(true);
+let cvi4 = up4.ToInt64();
+console.log(suffix4 + " -> " + cv4 + " -> " + cvi4);
 
-var suffix3 = "qqqqqqaaaaiiiuuiiiuu78890987";
-var up3 = UP.After(up1, suffix3);
-var compressValue3 = up3.getCompressValue();
-console.log(compressValue3);
-
-var suffix4 = "qsdfqqqqasfdiiiuuiiiuu788wer";
-var up4 = UP.Between(up1, up3, suffix4);
-var compressValue4 = up4.getCompressValue();
-console.log(compressValue4);
-
-// console.log(UP.IsValidBytes);
-// console.log(UP.IsValidSuffix);
-// console.log(UP.CreateInvalid);
-// console.log(UP.InitialPosition);
-// console.log(UP.FromInt64);
-// console.log(UP.Before);
-// console.log(UP.After);
-// console.log(UP.Between);
-
-// test();
-
-function test() {
-    console.log(up1.getCompressValue);
-    console.log(up1.ToDebugString);
-
-    console.log(up1.Equals);
-    console.log(up1.GetSuffixForTest);
-    console.log(up1.ToInt64);
-    console.log(up1.IsValid);
-    console.log(up1.LessThan);
-}
