@@ -3,7 +3,7 @@
         {
             'target_name': 'UniquePosition',
             'defines': ['V8_DEPRECATION_WARNINGS=1'],
-            'sources': ['UniquePosition.cc'],
+            'sources': ['UniquePosition.cc', 'base64.cpp'],
             "conditions": [
                 [
                     "OS=='win'", {

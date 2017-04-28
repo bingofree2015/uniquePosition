@@ -131,7 +131,7 @@ class UniquePosition : public node::ObjectWrap {
     std::string GetSuffixForTest() const;
     static void GetSuffixForTest_(const v8::FunctionCallbackInfo<v8::Value>& args);
 
-    std::string getCompressValue() const;
+    std::string getCompressValue(const bool bIsBase64) const;
     static void getCompressValue_(const v8::FunctionCallbackInfo<v8::Value>& args);
 
     // Performs a lossy conversion to an int64 position.  Positions converted to
