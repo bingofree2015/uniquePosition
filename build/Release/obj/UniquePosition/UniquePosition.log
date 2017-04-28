@@ -1,9 +1,0 @@
-﻿  UniquePosition.cc
-  win_delay_load_hook.cc
-..\UniquePosition.cc(232): warning C4244: “初始化”: 从“double”转换到“int64”，可能丢失数据
-..\UniquePosition.cc(457): warning C4244: “参数”: 从“int64”转换到“double”，可能丢失数据
-..\UniquePosition.cc(765): warning C4267: “参数”: 从“size_t”转换到“uint32”，可能丢失数据
-    正在创建库 C:\project\Nodejs\uniquePosition\build\Release\UniquePosition.lib 和对象 C:\project\Nodejs\uniquePosition\build\Release\UniquePosition.exp
-  正在生成代码
-  已完成代码的生成
-  UniquePosition.vcxproj -> C:\project\Nodejs\uniquePosition\build\Release\\UniquePosition.node
