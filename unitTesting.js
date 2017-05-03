@@ -1,6 +1,7 @@
 'use strict';
 
-const up = require('./build/Release/UniquePosition');
+const up = require('./index');
+//const up = require('./build/Release/UniquePosition');
 
 let suffix1 = "01|02|300106|00bingofree2015";
 let up1 = up.InitialPosition(suffix1);

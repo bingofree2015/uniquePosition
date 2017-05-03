@@ -1,9 +1,9 @@
 {
     'targets': [
         {
-            'target_name': 'UniquePosition',
+            'target_name': 'uniquePosition',
             'defines': ['V8_DEPRECATION_WARNINGS=1'],
-            'sources': ['UniquePosition.cc', 'base64.cpp'],
+            'sources': ['src/uniquePosition.cc','src/base64.cpp'],
             "conditions": [
                 [
                     "OS=='win'", {
